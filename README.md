@@ -111,3 +111,20 @@ S3 Bucket (Origin)
 ---
 
 **Deployed with ❤️ on AWS Cloud**
+
+## Task 2: Docker Deployment
+
+### Dockerized Version
+- **Docker Image:** portfolio-website:latest
+- **Web Server:** Nginx Alpine
+- **Deployment:** AWS EC2 (t2.micro)
+- **Live URL:** http://54.123.45.67
+- **Container Port:** 80 (HTTP)
+
+### Dockerfile Overview
+Uses lightweight Nginx Alpine image with your website files.
+
+### Deployment Steps
+1. Clone repository
+2. Build image: `docker build -t portfolio-website .`
+3. Run container: `docker run -d -p 80:80 portfolio-website`

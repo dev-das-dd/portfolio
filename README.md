@@ -129,40 +129,57 @@ Uses lightweight Nginx Alpine image with your website files.
 2. Build image: `docker build -t portfolio-website .`
 3. Run container: `docker run -d -p 80:80 portfolio-website`
 
-## Task 3: CI/CD Pipeline with GitHub Actions
+---
 
-### CI/CD Status
-![Docker CI Pipeline](https://github.com/dev-das-dd/portfolio/actions/workflows/docker-ci.yml/badge.svg)
+## ✅ Task 3: CI/CD Pipeline with GitHub Actions
 
-### What This Does
-Every time code is pushed to the main branch:
-1. GitHub Actions automatically triggers
-2. Docker image is built automatically
-3. Image is pushed to Docker Hub
-4. No manual steps required!
+### What I Built
+Automated CI/CD pipeline that builds and pushes
+Docker image automatically on every git push.
+
+### Pipeline Flow
+git push → GitHub Actions triggers
+↓
+Checkout code
+↓
+Login to Docker Hub
+↓
+Build Docker image
+↓
+Push to Docker Hub ✅
+
+### Technologies Used
+- GitHub Actions
+- Docker Hub
+- YAML Configuration
+- GitHub Secrets
 
 ### Pipeline File
 Located at: `.github/workflows/docker-ci.yml`
 
-### How It Works
-```yaml
-Trigger: Push to main branch
-Steps:
-  1. Checkout code from GitHub
-  2. Login to Docker Hub (using secrets)
-  3. Build Docker image
-  4. Push image to Docker Hub
-```
+### Screenshots
+
+#### ✅ GitHub Actions - Pipeline Success
+![GitHub Actions Success](SCREENSHOTS/actions-success.png)
+
+#### 🐳 Docker Hub - Image Pushed Automatically
+![Docker Hub Image](SCREENSHOTS/dockerhub-image.png)
+
+#### 🌐 Website Running from Auto-Built Image
+![Website Running](SCREENSHOTS/website-running.png)
 
 ### Docker Hub Image
-https://hub.docker.com/r/dev01das/portfolio-website
-
-### Pull and Run
 ```bash
 docker pull dev01das/portfolio-website:latest
 docker run -d -p 80:80 dev01das/portfolio-website:latest
 ```
 
+### What I Learned
+- ✅ CI/CD concepts and pipeline creation
+- ✅ GitHub Actions workflow structure
+- ✅ Automated Docker builds
+- ✅ Secure secrets management
+- ✅ Transition from manual to automated deployment
 ### CI/CD Benefits
 - ✅ Automated builds (no manual work)
 - ✅ Consistent image builds

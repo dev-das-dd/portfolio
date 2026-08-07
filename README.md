@@ -160,7 +160,7 @@ Located at: `.github/workflows/docker-ci.yml`
 ### Screenshots
 
 #### ✅ GitHub Actions - Pipeline Success
-![GitHub Actions Success](SCREENSHOTS/actions-success.png)
+![GitHub Actions Success](SCREENSHOTS/github-actions-success.png)
 
 #### 🐳 Docker Hub - Image Pushed Automatically
 ![Docker Hub Image](SCREENSHOTS/dockerhub-image.png)

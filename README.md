@@ -186,3 +186,30 @@ docker run -d -p 80:80 dev01das/portfolio-website:latest
 - ✅ Secure credential handling (GitHub Secrets)
 - ✅ Always deployment-ready
 - ✅ Reduces human error
+
+## ✅ Task 4: Automated Deployment with Nginx Reverse Proxy
+
+### What I Built
+Automated CI/CD pipeline that deploys to EC2 via SSH and serves via Nginx reverse proxy.
+
+### Deployment Flow
+Every git push:
+1. GitHub Actions builds Docker image (CI)
+2. Pushes to Docker Hub
+3. SSHs into EC2 (CD)
+4. Pulls latest image
+5. Runs container on port 8080
+6. Nginx reverse proxy serves on port 80
+
+### Technologies
+- GitHub Actions (CI/CD)
+- Docker Hub (Image Registry)
+- AWS EC2 (Cloud VM)
+- Nginx (Reverse Proxy)
+- SSH (Secure Deployment)
+- Ubuntu Linux
+
+
+### Screenshots
+![Pipeline](SCREENSHOTS/task4-pipeline-success.png)
+![Website](SCREENSHOTS/task4-website-live.png)
